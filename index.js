@@ -262,14 +262,13 @@ function tallyUpDonations(runners) {
  * etc
 */
 function counterMaker() {
-  const count = 0;
-  return function(){
-    count = count + 1;
-  return count;
-}
-}
 
-cont newCounter= counterMaker;
+  let count = 0;
+  function counter(){
+  return count++;
+}
+return counter;
+}
 
 /**
  * ### Challenge `counterMakerWithLimit`
